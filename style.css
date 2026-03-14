@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Título principal */
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('img/fp.jpeg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 { font-size: 3.5rem; }
+
+.services {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.card-1 { background-image: url('img/tourM1.jpeg'); }
+.card-2 { background-image: url('img/tourH1.jpeg'); }
+.card-3 { background-image: url('img/tourS1.jpeg'); }
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.overlay:hover { background: rgba(0, 0, 0, 0.4); }
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    padding: 3rem;
+    text-align: center;
+}
+
+.social-links {
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    color: #ff9f43;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem; /* Texto más pequeño para que no se corte */
+        padding: 0 10px;
+    }
+
+    .hero {
+        height: 50vh; /* Un poco más corto en móvil */
+    }
+
+    .service-card {
+        height: 300px; /* Reducimos la altura de las imágenes de servicios */
+        background-attachment: scroll; /* El efecto fixed a veces falla en móviles, mejor usar scroll */
+    }
+
+    .overlay h2 {
+        font-size: 1.5rem;
+    }
+
+    .social-links {
+        display: flex;
+        flex-direction: column; /* Las redes sociales se ponen una sobre otra */
+        gap: 15px;
+    }
+
+    .social-links a {
+        margin: 5px 0;
+        font-size: 1rem;
+    }
+}
+
+.whatsapp-btn {
+    background-color: #25d366;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+}
+
+.whatsapp-fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.whatsapp-fixed:hover {
+    transform: translateY(-5px);
+}
